@@ -1,6 +1,7 @@
 import React from 'react';
 import {useState} from 'react';
 
+
 export function AddNewFood({closeModal}){
     const [form, setForm] = useState({
         name: '',
@@ -29,27 +30,30 @@ export function AddNewFood({closeModal}){
     }
   
     return (
-        <div className="Modal">
+        <div className="field">
         <form onSubmit={handleSubmit}>
-          <div className="container">
-          <button onClick={() => closeModal(false)}>close form!</button>
+        <hr></hr>
+          
+          <button className="button" onClick={() => closeModal(false)}>Close form!</button>
 
-            <div className="title">
+            <div className="lable">
             <label htmlFor="name" className="label">Food Name</label>
             <input id="name" className="input" name="name" onChange={handleChange}/>
+          
             </div>
-            </div>
-            <div className="title"></div>
+            <div className="lable"></div>
             <label htmlFor="calories" className="label">Food Calories</label>
             <input id="calories" className="input" name="calories" onChange={handleChange}/>
-            <div className="title">
+            <div className="lable">
             <label htmlFor="image" className="label">Food Image</label>
             <input id="image" className="input" name="image" onChange={handleChange}/>
             </div>
             <button type="submit" className="button is-link">
                 Submit
             </button>
+            <hr></hr>
           </form>  
+          
           </div>
 
         

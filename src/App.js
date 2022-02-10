@@ -17,7 +17,7 @@ function App() {
     
     <div className="App">
     <h1 style={{fontSize: 40}}><b>IronNutrition</b></h1>
-    <button onClick={() => setisModalVisible(true)}>Add Foods!</button>        
+    <button className="button" onClick={() => setisModalVisible(true)}>Add Foods!</button>        
     {isModalVisible ? <AddNewFood closeModal={setisModalVisible}/> : null}
 
     <Search
